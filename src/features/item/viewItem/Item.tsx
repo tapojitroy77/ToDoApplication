@@ -19,19 +19,23 @@ export function Item() {
     const dispatch = useAppDispatch();
     return (
         <div className={styles.checkboxes}>
-            <ul>
-            {items.map(item => {
-                return (
-                <li>
-                    <input type="checkbox" checked={item.isCompleted} onChange={() => dispatch(updateItemStatus(item))}/>
-                    {item.name}
-                </li>
-                )
-            })}
-            </ul>
-            <button className={styles.button} onClick={() => dispatch(updateAddItemPopup(true))}>
-                <img src={process.env.PUBLIC_URL + '/add.png'} alt="add"/>
-            </button> 
+            <div>
+                <ul>
+                {items.map(item => {
+                    return (
+                    <li>
+                        <input type="checkbox" checked={item.isCompleted} onChange={() => dispatch(updateItemStatus(item))}/>
+                        {item.name}
+                    </li>
+                    )
+                })}
+                </ul>
+            </div>
+            <div>
+                <button className={styles.button} onClick={() => dispatch(updateAddItemPopup(true))}>
+                    <img src={process.env.PUBLIC_URL + '/add.png'} alt="add"/>
+                </button>
+            </div>
             {displayAddItemPopup &&
                 <AddItem
                     onClose={() => dispatch(updateAddItemPopup(false))}
