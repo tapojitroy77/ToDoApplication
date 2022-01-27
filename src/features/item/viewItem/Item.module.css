@@ -1,0 +1,32 @@
+.checkboxes {
+    background: none no-repeat scroll 0 0 #fff;
+    position: relative;    
+    float: none;
+    margin:90px 0 100px 0;
+    border: 1px solid #938063;
+    padding-top: 25px;
+    padding-bottom: 85px;
+    border-radius: 10px;
+    
+    justify-content: center;
+}
+.checkboxes label {
+    float: left;
+}
+.checkboxes ul {
+    margin: 0;
+    list-style: none;
+    float: left;
+}
+.button {
+    border: none;
+    background: none;
+}
+.button img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position:absolute;
+    bottom:0;
+    text-align: center;
+}
